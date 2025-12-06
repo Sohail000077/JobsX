@@ -1,208 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JobsX - Batman Theme</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-/* === Global Styles === */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-body { 
-    min-height: 100vh; 
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #222);
-    color: #fff;
-    transition: background 0.5s;
-}
-
-/* === Container === */
-.container { max-width: 650px; margin: auto; padding: 20px; }
-
-/* === Logo / Profile === */
-.logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 20px auto;
-    border: 3px solid #ffeb3b;
-    box-shadow: 0 0 25px #ffeb3b;
-    transition: transform 0.5s;
-}
-.logo img { width: 100%; height: 100%; object-fit: cover; }
-.logo:hover { transform: rotate(15deg); }
-
-/* === Daily Update Box === */
-.daily-update {
-    background: rgba(255, 235, 59, 0.1);
-    color: #ffeb3b;
-    backdrop-filter: blur(8px);
-    padding: 15px 20px;
-    border-radius: 20px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px #ffeb3b33;
-    animation: fadeIn 2s ease;
-}
-@keyframes fadeIn {
-    0%{opacity:0; transform:translateY(-10px);}
-    100%{opacity:1; transform:translateY(0);}
-}
-
-/* === Search Bar === */
-.search-box input {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 50px;
-    border: 2px solid #ffeb3b;
-    outline: none;
-    font-size: 16px;
-    background: #111;
-    color: #ffeb3b;
-    box-shadow: 0 0 15px #ffeb3b33;
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-.search-box input:focus { 
-    box-shadow: 0 0 25px #ffeb3b;
-    transform: scale(1.02);
-}
-
-/* === Category Tabs === */
-.categories {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-.category {
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    background: #222;
-    color: #ffeb3b;
-    border: 2px solid #ffeb3b;
-    transition: all 0.3s;
-    margin: 5px 0;
-}
-.category:hover, .category.active {
-    background: #ffeb3b;
-    color: #222;
-    box-shadow: 0 0 20px #ffeb3b;
-}
-
-/* === Job Cards === */
-.cards { display: flex; flex-direction: column; gap: 15px; }
-.card {
-    background: #111;
-    border-left: 5px solid #ffeb3b;
-    padding: 15px 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #ffeb3b33;
-    transition: transform 0.4s, box-shadow 0.4s;
-    position: relative;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px #ffeb3b;
-}
-.card a {
-    display: block;
-    color: #ffeb3b;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px 15px;
-    border-radius: 50px;
-    background: #222;
-    border: 2px solid #ffeb3b;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.card a:hover { 
-    transform: scale(1.05); 
-    box-shadow: 0 0 25px #ffeb3b;
-}
-
-/* === Badge / Icon === */
-.card::before {
-    content: "🦇";
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 20px;
-    animation: bounce 1s infinite;
-}
-@keyframes bounce {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
-
-/* === Theme Toggle === */
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    border-radius: 30px;
-    background: #222;
-    color: #ffeb3b;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 0 20px #ffeb3b33;
-    transition: all 0.3s;
-}
-.theme-toggle:hover { box-shadow: 0 0 25px #ffeb3b; }
-
-/* === Mobile Optimized === */
-@media(max-width: 600px){
-    .categories { gap: 10px; }
-    .category { flex: 1 1 45%; text-align: center; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Career Hub </title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="theme-toggle">🦇</div>
+    <header>
+        <h1>Welcome to Resource Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#pdfs">PDFs</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#youtube">YouTube</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="container">
-    <!-- Logo -->
-    <div class="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Batman_emblem.svg" alt="Batman Logo">
-    </div>
+    <main>
+        <section id="jobs">
+            <h2>Jobs</h2>
+            <div id="jobs-list">
+                <!-- Job links will appear here -->
+            </div>
+            <button onclick="addJobLink()">Add Job Link</button>
+        </section>
 
-    <!-- Daily Update -->
-    <div class="daily-update">
-        🦇 Today's Jobs: Wayne Tech Hiring, Gotham IT Drive, Government Jobs
-    </div>
+        <section id="pdfs">
+            <h2>PDFs</h2>
+            <div id="pdfs-list">
+                <!-- PDF links will appear here -->
+            </div>
+            <button onclick="addPdfLink()">Add PDF Link</button>
+        </section>
 
-    <!-- Search -->
-    <div class="search-box">
-        <input type="text" placeholder="Search jobs...">
-    </div>
+        <section id="courses">
+            <h2>Courses</h2>
+            <div id="courses-list">
+                <!-- Course links will appear here -->
+            </div>
+            <button onclick="addCourseLink()">Add Course Link</button>
+        </section>
 
-    <!-- Categories -->
-    <div class="categories">
-        <div class="category active">All</div>
-        <div class="category">Govt</div>
-        <div class="category">IT</div>
-        <div class="category">Internship</div>
-        <div class="category">Courses</div>
-        <div class="category">Exams</div>
-    </div>
+        <section id="youtube">
+            <h2>YouTube</h2>
+            <div id="youtube-list">
+                <!-- YouTube links will appear here -->
+            </div>
+            <button onclick="addYouTubeLink()">Add YouTube Link</button>
+        </section>
 
-    <!-- Job Cards -->
-    <div class="cards">
-        <div class="card"><a href="#">Wayne Tech Off-Campus 2025</a></div>
-        <div class="card"><a href="#">Gotham IT Drive 2025</a></div>
-        <div class="card"><a href="#">Gotham Govt Jobs 2025</a></div>
-        <div class="card"><a href="#">Arkham Internship 2025</a></div>
-        <div class="card"><a href="#">Bat-Coding Course</a></div>
-        <div class="card"><a href="#">GCPD Exams</a></div>
-    </div>
-</div>
+        <section id="instagram">
+            <h2>Instagram</h2>
+            <div id="instagram-list">
+                <!-- Instagram links will appear here -->
+            </div>
+            <button onclick="addInstagramLink()">Add Instagram Link</button>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2025 Resource Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
